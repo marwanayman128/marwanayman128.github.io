@@ -10,37 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="style.css">
-
-    <script src="/script.js" type="text/javascript"></script>
-
-    <script>
-        function sendMail() {
-            var params = {
-                from_name: document.getElementById("name").value,
-                email: document.getElementById("email").value,
-                message: document.getElementById("message").value,
-            };
-
-            const serviceID = "service_u3ail3c";
-            const templateID = "template_ou4cfnj";
-
-            emailjs.send(serviceID, templateID, params)
-                .then(res => {
-                    document.getElementById("name").value = "";
-                    document.getElementById("email").value = "";
-                    document.getElementById("message").value = "";
-                    console.log(res);
-                    alert("Your message sent successfully!!");
-                })
-                .catch(err => console.log(err));
-        }
-
-        // Wait for the emailjs library to load
-        window.onload = function() {
-            emailjs.init("kIwwuOynoCDe-Tfoe");
-        };
-    </script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
 </head>
 
@@ -231,25 +200,7 @@
             <input type="text" name="name" placeholder="Your Name" required class="input" id="name">
             <input type="text" placeholder="Your email" class="input" name="email" required id="email">
             <textarea name="message" placeholder="Your message" required id="message"></textarea>
-            <button class="GetInTouch" type="submit" onclick='var params = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    message: document.getElementById("message").value,
-  };
-
-  const serviceID = "service_nltsp5o";
-  const templateID = "template_tjej6mb";
-
-    emailjs.send(serviceID, templateID, params)
-    .then(res=>{
-        document.getElementById("name").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("message").value = "";
-        console.log(res);
-        alert("Your message sent successfully!!")
-
-    })
-    .catch(err=>console.log(err));'>Submit<div class="hoverEffect"><div></div></div></button>
+            <button class="GetInTouch" type="submit" onclick="sendMail();">Submit<div class="hoverEffect"><div></div></div></button>
         </form>
     </div>
 
