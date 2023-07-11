@@ -1494,3 +1494,50 @@ footer {
         font-size: 1.3rem;
     }
 }
+
+@media screen and (max-width: 386px) {
+    .hoverEffect3 {
+        top: 10%;
+        left: 13%;
+    }
+    .hoverEffect3 div {
+        width: calc(24rem - 9rem);
+        height: calc(16rem - 9rem);
+        opacity: 0.4;
+    }
+    .navbar {
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        width: 90%;
+    }
+    .navbar .logo {
+        padding: 1em 0 0 0;
+        margin-bottom: 1em;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+    .navbar img {
+        width: 11%;
+    }
+    .menu-icon {
+        padding: 0 10%;
+        display: block;
+    }
+    .Navlist {
+        display: none;
+    }
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar ul li {
+        margin: 0.5em 0;
+    }
+    #menu.show {
+        display: block;
+        padding: 3% 10% 3%;
+    }
+}
