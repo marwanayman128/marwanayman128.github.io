@@ -416,13 +416,13 @@
                 let plant = document.querySelector('.about');
                 let yAxisValue = plant.offsetTop - (window.innerWidth - document.body.clientWidth) / 2;
 
-                if (value >= 900) {
+                if (value >= 900 && screen.width >= 834) {
                     text.style.marginTop = (value - 900) * 2.5 + 'px';
                     hill5.style.left = (value - 900) * 1.5 + 'px';
                     hill4.style.left = (value - 900) * -1.5 + 'px';
                     console.log("value:", value);
                     console.log("yAxisValue", yAxisValue);
-                    if (value - 200 >= yAxisValue) {
+                    if (value - 100 >= yAxisValue) {
                         text.style.display = 'none';
                         hill5.style.display = 'none';
 
