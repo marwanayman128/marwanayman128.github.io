@@ -98,7 +98,7 @@
 
     <div>
         <div class="about">
-            <h1>Hello, I'm Marwan, a recent graduate from Helwan University's Computer Science faculty. </h1>
+            <h1 class="aboutReach">Hello, I'm Marwan, a recent graduate from Helwan University's Computer Science faculty. </h1>
 
             <div class="Sec3Part2" id="Sec3Part2">
                 <div>
@@ -410,6 +410,7 @@
             let text = document.querySelector('.text');
             let hill4 = document.querySelector('.hill4');
             let hill5 = document.querySelector('.hill5');
+            let aboutReach = document.querySelector('.aboutReach');
 
             function updateAnimation() {
                 let value = window.scrollY;
@@ -420,8 +421,7 @@
                     text.style.marginTop = (value - 900) * 2.5 + 'px';
                     hill5.style.left = (value - 900) * 1.5 + 'px';
                     hill4.style.left = (value - 900) * -1.5 + 'px';
-                    console.log("value:", value);
-                    console.log("yAxisValue", yAxisValue);
+
                     if (value - 100 >= yAxisValue) {
                         text.style.display = 'none';
                         hill5.style.display = 'none';
