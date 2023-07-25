@@ -23,6 +23,11 @@ body {
     overflow-x: hidden;
 }
 
+.prev,
+.next {
+    display: none;
+}
+
 .navbar {
     width: 100%;
     display: flex;
@@ -567,6 +572,8 @@ body {
 }
 
 .Sec3Part2 div {
+    padding-bottom: 26%;
+    width: 100%;
     width: 25%;
 }
 
@@ -1394,13 +1401,67 @@ footer {
         padding: 3% 0 10% 0 !important;
         font-size: clamp(0.5rem, 5vw, 1.3rem);
     }
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        display: block;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 5%;
+    }
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+    }
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    .active,
+    .dot:hover {
+        background-color: #3d3d3d;
+    }
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+    /* On smaller screens, decrease text size */
     .Sec3Part2 {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding-top: 10%;
+        margin: auto;
+        position: relative;
     }
     .Sec3Part2 div {
+        display: none;
         padding-bottom: 26%;
         width: 100%;
     }
@@ -1413,6 +1474,7 @@ footer {
     }
     .Sec3Part2 p {
         font-size: clamp(0.5rem, 5vw, 1rem);
+        height: 120px;
     }
     .projects .Projecttext {
         display: flex;

@@ -98,26 +98,35 @@
     <div>
         <div class="about">
             <h1 class="aboutReach">Hello, I'm Marwan, a recent graduate from Helwan University's Computer Science faculty. </h1>
-
-            <div class="Sec3Part2" id="Sec3Part2">
-                <div>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <div class="Sec3Part2 slideshow-container" id="Sec3Part2">
+                <div class="mySlides fade">
                     <img src="./images/vector/undraw_teaching_re_g7e3.png" alt="">
                     <h2>Teacher</h2>
                     <p>As a computer science teacher specialising in the IGCSE curriculum, I have gained valuable experience. As a teacher, I strive to create a dynamic and interactive learning environment. My goal is to instill a lifelong love of learning
                         and to foster a deep understanding of the subject matter.</p>
                 </div>
-                <div>
+                <div class="mySlides fade">
                     <img src="./images/vector/undraw_programming_re_kg9v.png" alt="">
                     <h2>Developer</h2>
                     <p>I am a skilled full-stack web developer proficient in all stages of website development. I possess a comprehensive understanding of HTML, CSS, JavaScript, and various web frameworks like Bootstrap, React, Laravel. From conceptualization
                         to deployment, I ensure the creation of visually appealing, user-friendly, and functional websites.</p>
                 </div>
-                <div>
+                <div class="mySlides fade">
                     <img src="./images/vector/undraw_edit_photo_re_ton4.png" alt="">
                     <h2>Designer</h2>
                     <p>I have a good background in Adobe Photoshop,Illustrator and Premiere, allowing me to create captivating digital content and various designing through different tools, integration and innovation in the field of editing </p>
                 </div>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
             </div>
+
+
 
             <h1 class="endofabout">“This creative ability enhances my problem-solving skills and broadens my range of technical expertise. I am excited to leverage my teaching experience, web development skills, creative abilities, and comprehensive knowledge of computer science
                 to contribute to the field of education and digital innovation.”
@@ -444,6 +453,45 @@
 
                 var menuIcon = document.querySelector(".menu-icon");
                 menuIcon.classList.toggle("cancel");
+            }
+            if (screen.width <= 653) {
+                let prev = document.querySelector('prev');
+                let next = document.querySelector('next');
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {
+                        slideIndex = 1
+                    }
+                    if (n < 1) {
+                        slideIndex = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace("active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+            } else {
+                let slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "block";
+                }
             }
         </script>
         <script src="/script.js"></script>
