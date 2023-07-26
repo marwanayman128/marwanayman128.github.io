@@ -572,9 +572,9 @@ body {
 }
 
 .Sec3Part2 div {
-    padding-bottom: 26%;
+    padding-bottom: 2%;
     width: 100%;
-    width: 25%;
+    width: 29%;
 }
 
 .Sec3Part2 h2 {
@@ -586,7 +586,7 @@ body {
 }
 
 .Sec3Part2 p {
-    font-size: 1.1669rem;
+    font-size: 1.1rem;
 }
 
 .Sec3Part2 img {
@@ -1203,7 +1203,7 @@ footer {
         text-align: center;
         border-top: 5px solid #526D82;
         padding-top: 15px;
-        font-size: clamp(0.5rem, 5vw, 2.5rem);
+        font-size: 2.4rem;
         color: #9DB2BF;
     }
     .Sec3Part2 p {
@@ -1473,7 +1473,7 @@ footer {
         color: #9DB2BF;
     }
     .Sec3Part2 p {
-        font-size: clamp(0.5rem, 5vw, 1rem);
+        font-size: clamp(0.5rem, 5vw, 1.2rem);
         height: 120px;
     }
     .projects .Projecttext {
