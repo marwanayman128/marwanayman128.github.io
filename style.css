@@ -46,7 +46,7 @@ body {
 }
 
 .navbar.hidden {
-    top: -100px;
+    top: -200px;
 }
 
 .navbar .logo {
