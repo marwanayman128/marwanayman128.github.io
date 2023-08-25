@@ -23,6 +23,14 @@ body {
     overflow-x: hidden;
 }
 
+a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit the parent's text color */
+  font-weight: normal; /* Reset font weight */
+  /* Add other style adjustments as needed */
+}
+
+
 .prev,
 .next {
     display: none;
