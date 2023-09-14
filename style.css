@@ -24,9 +24,8 @@ body {
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
-
 
 .prev,
 .next {
@@ -121,6 +120,7 @@ a {
 
 .home .download {
     color: white;
+    z-index: 1000000000;
 }
 
 .clearfix::after {
